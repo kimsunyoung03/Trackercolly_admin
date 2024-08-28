@@ -2,6 +2,7 @@
 body{min-width:1500px;} /*어드민페이지에서만 적용*/
 
 *{font-size:14px;line-height:24px;font-weight:normal;color:#666;}
+h1{font-weight:800;color:#000}
 a{cursor: pointer;}
 article{margin-bottom:40px}
 article.half{display:flex;justify-content:space-between;gap:8px;}
@@ -39,6 +40,7 @@ select{min-width:107px}
 input[type="checkbox"]{width:12px;height:12px;}
 input:read-only{background:#e4e4e4; user-select:none}
 .top_area{display:flex;justify-content:space-between;align-items:center;}
+.top_area .board_name{margin-bottom:0}
 /* 보드 박스 디자인 공통 */
 .board{padding:20px;border:1px solid #fff;background:#fff;border-radius:5px;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
 .board_name{font-size:16px;font-weight:700;margin-bottom:16px;position:relative;color:#222}
@@ -76,7 +78,7 @@ input:read-only{background:#e4e4e4; user-select:none}
 .logo_area{display:flex;justify-content:center;align-items:center;flex-direction:column;padding:40px;border-bottom:1px solid #e6e6e6}
 .logo_area a{display:flex;justify-content:center;align-items:center;flex-direction:column;cursor:pointer;user-select:none;}
 .logo_area .logo{width:120px;margin-bottom:8px}
-.logo_area p{padding-left:16px;color:#222;font-size:15px;letter-spacing:16px;}
+.logo_area p{padding-left:16px;color:#222;font-size:15px;letter-spacing:20px;width:fit-content;margin-top:10px;color:#999}
 /*-- 어드민 메뉴--*/
 .adm_nav_depth1{padding:8px 16px;color:#222;border-bottom:1px solid #e6e6e6;font-size:14px;display: flex;justify-content: space-between;cursor:pointer;border-right:3px solid #7F23F3;}
 .adm_nav_depth1.on span{color:#7F23F3;}
@@ -413,10 +415,14 @@ input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1
 .workplace_wrap .img_area img{width:100%;height:auto;}
 .workplace_wrap .table_defalt td{text-align: left;}
 
+
 /*게시판관리*/
 .board_write label{margin-bottom:16px}
 .board_write input{width:100%}
 .board_write textarea{width:100%;min-height:300px;}
+.board03_wrap .table_defalt td{text-align:left;}
+.board03_wrap textarea{width:100%;min-height:180px;}
+.board03_F{vertical-align : top;}
 
 /*리뷰*/
 .review_wrap .img_area{width:80px;height:80px;background:#ccc;overflow:hidden;}
@@ -427,6 +433,9 @@ input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1
 .file{text-decoration: underline;cursor:pointer;}
 
 /*설정*/
+.setting_form input{width: 500px;}
+.toggle_wrap{border-bottom:none !important;width:1010px;}
+.setting_form .tit_area{background:#f8f8f8;padding:0 16px;margin-bottom:10px}
 .preferences_form .label_name{margin-top:16px}
 .preferences_form input{width:450px;}
 .imgfile.pc{width:500px;height:240px;}

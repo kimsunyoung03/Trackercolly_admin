@@ -66,7 +66,7 @@
                 <li><a href="./board03.html">1:1 문의</a></li>
             </ul>
         <!--DEPTH 1-->
-        <li class="adm_nav_depth1"><a href="./reveiw.html"><span><i class="fa fa-bar-chart before" aria-hidden="true"></i>통계</span></a></li>  
+        <li class="adm_nav_depth1"><a href="./chart.html"><span><i class="fa fa-bar-chart before" aria-hidden="true"></i>통계</span></a></li>  
         </li>
         <!--DEPTH 1-->
         <li class="adm_nav_depth2_group">
@@ -92,62 +92,68 @@
 <!----======== 내용부분 ========---->
 <section id="admin_contents_wrap">
     <p class="title">Workplace</p>
-    <article class="review_wrap board">
-        <p class="label_name">작성자정보</p>
+    <article class="workplace_wrap board">
+        <p class="label_name">기본정보</p>
         <table class="table_defalt">
             <tr>
                 <th>아이디</th>
-                <td>dmonster</td>
-                <th>작성자</th>
-                <td>홍길동</td>
-            </tr>
-        </table>
-        <p class="label_name mt_40">리뷰정보</p>
-        <table class="table_defalt">
-            <tr>
-                <th>브랜드</th>
-                <td colspan="3">CELINE</td>
+                <td>dmonster@gmail.com</td>
+                <th>Serial Number</th>
+                <td>12345678</td>
             </tr>
             <tr>
-                <th>모델 및 상품정보</th>
-                <td colspan="3" >
-                    <div class="img_wrap">
-                        <div class="img_area">
-                            <img src="img/review.png">
-                        </div>
-                        <div class="txt_area">
-                            <p>블랙 퀴르 트리오페 오벌 라지 크로스백</p>
-                            <p>1개</p>
-                        </div>
-                    </div>
-                </td>
+                <th>Workplace Name</th>
+                <td>디몬스터</td>
+                <th>전화번호</th>
+                <td>02-123-5678</td>
             </tr>
             <tr>
-                <th>작성일</th>
-                <td>2024-06-17</td>
-                <th>별점</th>
-                <td>4.0</td>
+                <th>홈페이지</th>
+                <td>https://</td>
+                <th>주소</th>
+                <td>서울시 서대문구</td>
             </tr>
             <tr>
-                <th>리뷰내용</th>
+                <th>소개이미지</th>
                 <td colspan="3" class="img">
-                    <div class="txt_area">
-                        <P>내용</P>
-                    </div>
-                    <div class="img_area">
-                        <img src="img/review.png">
+                    <div class="img_area img_preview">
+                        <img src="img/img.jpg" alt="임시이미지">
                     </div>
                 </td>
             </tr>
+            <tr>
+                <th>Member</th>
+                <td>10</td>
+                <th>생성일</th>
+                <td>2024-04-26</td>
+            </tr>
         </table>
-        <p class="label_name mt_40">처리상태</p>
-        <ul class="filter_select mb_40">
-            <li class="on">문제없음 </li>
-            <li>게시중단</li>
-        </ul>
+        <p class="board_name mt_40">메모</p>
+        <label>
+            <input type="text" placeholder="메모를 입력해주세요." class="w-100">
+            <p class="comment"><span class="count_leng">0</span> / 100</p>
+        </label>
     </article>
+    <div class="btm btn_area">
+        <button onclick="location.href='workplace.html'">목록</button>
+        <button>저장</button>
+    </div>
 </section>
 <!----======== 내용부분 끝 ========---->
+<div class="modal">
+    <div class="img_veiw">
+        <a class="close_btn"><img src="img/icon_close.svg"></a>
+        <img src="img/img.jpg" alt="컨시어지임시이미지">
+    </div>
+</div>
+<script>
+    $('.close_btn').on('click',function(){
+        $('.modal').removeClass('on');
+    })
+    $('.img_preview').on('click',function(){
+        $('.modal').addClass('on');
+    })
+</script>
 <!----======== 관리자 레이아웃 하단    ========---->
 <section id="admin_footer_wrap">
 </section>
