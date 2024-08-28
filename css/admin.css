@@ -1,6 +1,7 @@
 /*==== 어드민 공통 레이아웃 ====*/
 body{min-width:1500px;} /*어드민페이지에서만 적용*/
-
+.toastui-editor-defaultUI-toolbar{background:#f2f2f2;}
+.toastui-editor-tooltip .text{color:#fff !important}
 *{font-size:14px;line-height:24px;font-weight:normal;color:#666;}
 h1{font-weight:800;color:#000}
 a{cursor: pointer;}
@@ -416,7 +417,7 @@ input[type=file]{position: absolute;width: 1px;height: 1px;padding: 0;margin: -1
 .workplace_wrap .table_defalt td{text-align: left;}
 
 
-/*게시판관리*/
+/*게시판 관리*/
 .board_write label{margin-bottom:16px}
 .board_write input{width:100%}
 .board_write textarea{width:100%;min-height:300px;}

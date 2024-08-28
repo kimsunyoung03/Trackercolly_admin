@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1,width=device-width" /> 
+<title>Tracker Colly ADMIN 퍼블리싱 화면</title>
+<!-- Bootstrap -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- CSS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<link rel="stylesheet" href="./css/custom.css" />
+<link rel="stylesheet" href="./css/common.css" />
+<!-- JS -->
+<script src="./js/admin.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<style>
+body{padding:40px 20px}
+h1{font-size:18px;padding:10px;border-bottom:1px solid #ccc;font-weight:600;margin-bottom:16px}
+a{color:#007bff;text-decoration: underline;}
+h2{margin-bottom:20px;padding:20px;background:#666;color:#fff;font-size:16px}
+h2 span{font-size:14px;opacity:.7;}
+.table_defalt {width:100%;border-collapse: collapse;border: 0;border-bottom: 1px solid #ddd;table-layout: fixed;font-size:14px}
+.table_defalt th, .table_defalt td {border: 1px solid #ddd;text-align:center;padding: 8px;margin: 0;}
+.table_defalt tbody tr:last-child th, .table_defalt tbody tr:last-child td {border-bottom: 0;}
+.table_defalt th {background:#eee;}
+.table_defalt td {background: #fff;color:#666;}
+.table_defalt td.text_left{text-align:left;}
+.table_defalt td input{width:100%;}
+.table_defalt td input:read-only{background:#f2f2f2;}
+.table_defalt button.in_btn{width:100%}
+.remove{text-decoration: line-through;background:#ccc !important;}
+.remove a{color: #666 !important;text-decoration: line-through}
+.space{background:#f2f2f2 !important;height:36px;}
+.tap_menu{margin-bottom:16px;display:flex;gap:8px}
+.tap_menu li{padding:0 8px 5px;cursor: pointer;}
+.tap_menu li.on{font-weight:800;border-bottom:2px solid #000}
+section {display: none;}
+section.on{display:block;}
+</style>
+<h1>Tracker Colly 퍼블리싱 화면</h1>
+<ul class="tap_menu">
+    <li class="on" data-name="tap01">ADMIN</li>
+</ul>
+<section id="tap01" class="on">
+    <h2>ADMIN ( PC ONLY )</h2>
+    <table class="table_defalt">
+        <thead>
+            <tr>
+                <th width="80px">번호</th>
+                <th width="20%">화면구분</th>
+                <th>화면명</th>
+                <th>링크</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="count"></td>
+                <td>공통</td>
+                <td>어드민 UI</td>
+                <td><a target="_blank" href="adminUI.html">adminUI.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>로그인</td>
+                <td>어드민 로그인</td>
+                <td><a target="_blank" href="login.html">login.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td rowspan="4">회원관리</td>
+                <td>일반회원</td>
+                <td><a target="_blank" href="member01.html">member01.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>일반회원 - 상세</td>
+                <td><a target="_blank" href="member01_detail.html">member01.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>탈퇴회원</td>
+                <td><a target="_blank" href="member02.html">member02.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>탈퇴회원 - 상세</td>
+                <td><a target="_blank" href="member02_detail.html">member02.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td rowspan="2">Workplace</td>
+                <td>Workplace</td>
+                <td><a target="_blank" href="workplace.html">workplace.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>Workplace -  상세</td>
+                <td><a target="_blank" href="workplace_detail.html">workplace_detail.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td rowspan="8">게시판 관리</td>
+                <td>공지사항</td>
+                <td><a target="_blank" href="board01.html">board01.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>공지사항 - 신규등록</td>
+                <td><a target="_blank" href="board01_write.html">board01_write.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>공지사항 - 수정</td>
+                <td><a target="_blank" href="board01_edit.html">board01_edit.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>FAQ</td>
+                <td><a target="_blank" href="board02.html">board02.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>FAQ - 신규등록</td>
+                <td><a target="_blank" href="board02_write.html">board02_write.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>FAQ - 수정</td>
+                <td><a target="_blank" href="board02_edit.html">board02_edit.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>1:1문의</td>
+                <td><a target="_blank" href="board03.html">board03.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>1:1문의 - 수정</td>
+                <td><a target="_blank" href="board03_edit.html">board03_edit.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>통계</td>
+                <td>통계</td>
+                <td><a target="_blank" href="chart.html">chart.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td rowspan="4">설정</td>
+                <td>계정관리</td>
+                <td><a target="_blank" href="setting01.html">setting01.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>계정관리 - 신규등록</td>
+                <td><a target="_blank" href="setting01_write.html">setting01_write.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>계정관리 - 수정</td>
+                <td><a target="_blank" href="setting01_edit.html">setting01_edit.html</a></td>
+            </tr>
+            <tr>
+                <td class="count"></td>
+                <td>기본설정</td>
+                <td><a target="_blank" href="setting02.html">setting02.html</a></td>
+            </tr>
+            <tr>
+                <td colspan="4" class="space"></td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<script>
+
+    // 각 테이블에서 .count 엘리먼트에 순서를 매기는 함수
+    function updateCounts() {
+        $('.table_defalt').each(function() {
+            $(this).find('.count').each(function(index) {
+                $(this).text(index + 1);
+            });
+        });
+    }
+    // 페이지 로드 시 각 테이블에 순서를 매김
+    updateCounts();
+
+
+    // 탭 메뉴 클릭 이벤트
+    $('.tap_menu li').click(function() {
+        var tabId = $(this).attr('data-name'); 
+        $('.tap_menu li').removeClass('on');
+        $(this).addClass('on'); 
+        $('section').removeClass('on');
+        $('#' + tabId).addClass('on'); 
+    });
+</script>
+</body>
+</html>
